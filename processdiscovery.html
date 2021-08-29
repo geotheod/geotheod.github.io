@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-documentation-s-documentation">
+<h1>UNIVERSITY OF WEST ATTICA<a class="headerlink" href="#welcome-to-documentation-s-documentation" title="Permalink to this headline">¶</a></h1>
+
+<article>
+		<div>
+			<h1>Process Discovery</h1>
+		</div>
+		<div>		
+			<p>Process Discovery algorithms want to find a suitable process model that describes the order of events/activities that are executed during a process execution. [6]</p>
+			<h2><strong>Alpha Miner</strong></h2>
+			<p>The alpha miner is one of the most known Process Discovery algorithm and is able to find:</p>
+			<ul><li>A Petri net model where all the transitions are visible and unique and correspond to classified events (for example, to activities).</li><li>An initial marking that describes the status of the Petri net model when a execution starts.</li><li>A final marking that describes the status of the Petri net model when a execution ends.</li></ul>
+			<p>Although this algorithm has the following disadvantage:</p>
+			<ul><li>Cannot handle loops of length one and length two</li><li>Invisible and duplicated tasks cannot be discovered</li><li>Discovered model might not be sound</li><li>Weak against noise [6]</li></ul>
+			<h2><strong>Inductive Miner</strong></h2>
+			<p>The basic idea of Inductive Miner is about detecting a ‘cut’ in the log (e.g. sequential cut, parallel cut, concurrent cut and loop cut) and then recur on sublogs, which were found applying the cut, until a base case is found. The Directly-Follows variant avoids the recursion on the sublogs but uses the Directly Follows graph.</p>
+			<p>Inductive miner models usually make extensive use of hidden transitions, especially for skipping/looping on a portion on the model. Furthermore, each visible transition has a unique label (there are no transitions in the model that share the same label).</p>
+			<p>Two process models can be derived: Petri Net and Process Tree.</p>
+			<p>Some advantages of this algorithm are:</p>
+			<ul><li>Can handle invisible tasks</li><li>Model is sound</li><li>Most used process mining algorithm [6]</li></ul>
+			<h2><strong>Heuristic Miner</strong></h2>
+			<p>Heuristics Miner is an algorithm that acts on the Directly-Follows Graph, providing way to handle with noise and to find common constructs (dependency between two activities, AND). The output of the Heuristics Miner is a Heuristics Net, so an object that contains the activities and the relationships between them. The Heuristics Net can be then converted into a Petri net.</p>
+			<p>It is possible to obtain a Heuristic Net and a Petri Net.</p>
+			<p>To apply the Heuristics Miner to discover a Heuristics Net, it is necessary to import a log. Then, a Heuristic Net can be found. There are also numerous possible parameters that can be inspected by clicking on the following button. <strong>&nbsp;</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In addition, this algorithm takes frequency into account, detects short loops but does not guarantee a sound model.[6]</p>
+		</div>
+	</article>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">INDEX</a></h1>
+
+
+
+
+
+
+
+
+<!-- <h3>Navigation</h3> -->
+<div>
+<span class="collapse leftelem"> Introduction </span>
+<div class="leftelem insidediv">
+	<ul class="leftulclass ">
+		<li><a href="introduction.html"><span class="leftelem"> Introduction </span></a></li>
+		<li><a href="theoreticalbackground.html"><span class="leftelem"> Theoretical Background </span></a></li>
+		<li><a href="processdiscovery.html"><span class="leftelem"> Process Discovery </span></a></li>
+		<li><a href="conformancechecking.html"><span class="leftelem"> Conformance checking </span></a></li>
+		<li><a href="evaluation.html"><span class="leftelem"> Evaluation </span></a></li>
+	</ul>
+</div>
+</div>
+<div>
+<span class="leftelem collapse"> Software </span>
+<div class="leftelem insidediv">
+	<ul class="leftulclass">
+		<li><span class="leftelem collapse"> Login </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="signup.html"><span class="leftelem"> Singup  </span></a> </li>
+				 <li><a href="login.html"><span class="leftelem"> Login  </span></a></li>				
+			  </ul> 
+		 </div></li> 
+		<li><span class="leftelem collapse"> File </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="fupload.html"><span class="leftelem"> Upload  </span></a> </li>
+				 <li><a href="fconvxes.html"><span class="leftelem"> Convert to xes  </span></a></li>
+				 <li><a href="fconvcsv.html"><span class="leftelem"> Convert to csv  </span></a> </li>
+				 <li><a href="fview.html"><span class="leftelem"> View </span></a> </li>
+				 <li><a href="finfo.html"><span class="leftelem"> Info </span></a> </li>
+			  </ul> 
+		 </div></li> 
+		<li><span class="leftelem collapse"> Discover Model </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="falpha.html"><span class="leftelem"> Alpha Miner  </span></a> </li>
+				 <li><a href="fheur.html"><span class="leftelem"> Heuristics Miner  </span></a></li>
+				 <li><a href="find.html"><span class="leftelem"> Inductive Miner  </span></a> </li>
+			  </ul> 
+		 </div> </li>
+		<li><span class="leftelem collapse"> Statistics </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="#"><span class="leftelem"> Frequency  </span></a> </li>
+				 <li><a href="#"><span class="leftelem"> Activity Duration </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Concept Name  </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Mean Durations </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Trace Durations </span></a></li>
+			  </ul> 
+		 </div></li> 
+		<li><span class="leftelem collapse"> Conformance Checking </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="freplay.html"><span class="leftelem"> Replay Results  </span></a></li> 
+				 <li><a href="falign.html"><span class="leftelem"> Alignments </span></a></li>
+			  </ul> 
+		 </div></li> 
+	</ul>
+</div>
+</div>
+<a class="noborder" href="systemwalkthrough.html"><span class="leftelem"> System Walkthrough </span></a>
+<div>
+<span class="leftelem collapse"> API </span>
+<div class="leftelem insidediv">
+	<ul class="leftulclass"> 
+		<li><span class="leftelem collapse"> File </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="aintroduction.html"><span class="leftelem"> Introduction  </span></a> </li>
+				 <li><a href="aconvxes.html"><span class="leftelem"> Convert to xes  </span></a></li>
+				 <li><a href="aconvcsv.html"><span class="leftelem"> Convert to csv  </span></a> </li>
+				 <li><a href="aview.html"><span class="leftelem"> View </span></a> </li>
+				 <li><a href="ainfo.html"><span class="leftelem"> Info </span></a> </li>
+			  </ul> 
+		 </div></li> 
+		<li>
+		
+		<a class="noborder" href="aalpha.html"><span class="leftelem"> Discover Model </span></a>
+		</li>
+		<li><span class="leftelem collapse"> Statistics </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="#"><span class="leftelem"> Frequency  </span></a> </li>
+				 <li><a href="#"><span class="leftelem"> Activity Duration </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Concept Name  </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Mean Durations </span></a></li>
+				 <li><a href="#"><span class="leftelem"> Trace Durations </span></a></li>
+			  </ul> 
+		 </div></li> 
+		<li><span class="leftelem collapse"> Conformance Checking </span>
+		<div class="leftelem insidediv"> 
+			 <ul class="leftulclass"> 
+				 <li><a href="areplay.html"><span class="leftelem"> Replay Results  </span></a></li> 
+				 <li><a href="aalign.html"><span class="leftelem"> Alignments </span></a></li>
+			  </ul> 
+		 </div></li> 
+	</ul>
+</div>	
+</div>
+<div>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);
+$( ".collapse" ).click(function() {
+  $(this).parent().find(".insidediv" ).toggle( "slow", function() {
+     
+  });
+});
+
+</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Ilias Merkoureas
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
